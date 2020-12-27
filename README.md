@@ -26,7 +26,7 @@ For more information, please check [Tuya Developer Website](https://developer.tu
 
 后续：
 
-增加QQ登录接口，UI 美化
+UI 美化，参考文档多增加点功能
 
 ### 二．基本功能
 
