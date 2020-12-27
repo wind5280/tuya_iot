@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tuya.smart.android.Young">
+
+    <!-- sdcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:required="false" />
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK"
+        android:required="false" />
+    <!-- added from 2.7.2 -->
+    <uses-permission
+        android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"
+        android:required="false" />
+    <!-- camera need -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="com.tuya.smart.android.Young.TuyaSmartApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_iot"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="TUYA_SMART_APPKEY"
+            android:value="hjpmtyc4hgqvsgyf5jmr" />
+        <meta-data
+            android:name="TUYA_SMART_SECRET"
+            android:value="9wqeveh4fjq9k4nxpmnyn8wgju9ynemr" />
+
+        <activity
+            android:name="com.tuya.smart.android.Young.base.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tuya.smart.android.Young.device.LampActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
+        <activity
+            android:name="com.tuya.smart.android.Young.device.CommonDeviceDebugActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.login.activity.CountryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.login.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name="com.tuya.smart.android.Young.login.activity.QRCodeLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.login.activity.LoginWithPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.login.activity.AccountInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.login.activity.AccountConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.base.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.base.activity.PersonalInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.ECBindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.AddDeviceAPTipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.device.SwitchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.ECFailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.ECActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.AddDeviceTipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.base.activity.BrowserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.device.common.DeviceCommonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolrTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.device.common.DpSendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolrTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.tuya.smart.android.Young.scene.activity.SceneEditActivity" />
+        <activity android:name="com.tuya.smart.android.Young.personal.FeedbackActivity" />
+        <activity
+            android:name="com.tuya.smart.android.Young.base.activity.ZigBeeConfigActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolrTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.family.activity.FamilyIndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.family.activity.FamilyAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.family.activity.FamilyInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.family.activity.FamilyEmptyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.AddDeviceTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.config.ZigbeeConfigActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash.Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.tuya.smart.android.Young.scene.activity.SceneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <activity
+            android:name="com.tuya.smart.android.Young.scene.activity.ConditionTaskChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <activity
+            android:name="com.tuya.smart.android.Young.scene.activity.DeviceChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <activity
+            android:name="com.tuya.smart.android.Young.scene.activity.OperateorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <activity
+            android:name="com.tuya.smart.android.Young.scene.activity.OperatorValueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <activity
+            android:name="com.tuya.smart.android.Young.shortcut.ShortcutDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <activity
+            android:name="com.tuya.smart.android.Young.shortcut.ShortcutOperateDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default_Public_Theme" />
+        <!--  camera module -->
+        <activity
+            android:name="com.tuya.smart.android.Young.camera.AlarmDetectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tuya.smart.android.Young.camera.CameraCloudStorageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.tuya.smart.android.Young.camera.CameraCloudVideoActivity"></activity>
+        <activity
+            android:name="com.tuya.smart.android.Young.camera.CameraPanelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tuya.smart.android.Young.camera.CameraPlaybackActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.tuya.smart.android.Young.camera.CameraSettingActivity" />
+        <activity android:name="com.tuya.smart.android.Young.camera.QrCodeConfigActivity" />
+        <!--  camera module -->
+    </application>
+
+</manifest>
